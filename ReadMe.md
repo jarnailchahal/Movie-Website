@@ -15,4 +15,4 @@ Authenticated users can access this application to get information about the lat
 It uses the movie org API(https://developers.themoviedb.org/) in the backend and sqlite3 db to store user credentials and the passport module (https://www.passportjs.org/) to authenticate users.
 
 
-https://github.com/jarnailchahal/Movie-Website/blob/main/Demo.gif
+[a link] (https://github.com/jarnailchahal/Movie-Website/blob/main/Demo.gif)
