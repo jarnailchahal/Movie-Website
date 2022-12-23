@@ -1,0 +1,82 @@
+<html>
+
+  <head>
+    <title>	Movie Lovers </title>
+    <%- include('head') -%>
+  </head>
+
+<%- include('navbar') -%>
+
+<div class="container">
+  <br> 
+  <div >
+    <h1 class="display-5" > Movie Overview</h1>
+  </div>
+  <br>
+
+    <div class="card mb-3" >
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img class="img-thumbnail" src="<%= imageBaseUrl + parsedData.poster_path %>" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h4 class="display-6" class="card-title"> <%= parsedData.title %></h4>
+            <p class="card-text"><medium class="text-muted"><%= parsedData.tagline %></medium></p>
+
+            <p class="card-text"> <%= parsedData.overview %> </p>
+            <ul class="list-group" >
+              <li class="list-group-item"  >
+                Genre: 
+                <% parsedData.genres.forEach((genre)=> { %>
+                  <%= genre.name + ' |' %>
+                <% }); %>
+              </li>
+              <li class="list-group-item"  >
+              Release Date: <%= parsedData.release_date %>
+              </li>
+
+              <li class="list-group-item"  >
+                Spoken Languages: 
+                <% parsedData.spoken_languages.forEach((lang)=> { %>
+                  <%= lang.english_name + ' |' %>
+                <% }); %>
+              </li>
+              
+              <li class="list-group-item"  >
+                Runtime: <%= parsedData.runtime %> minutes
+                </li>
+
+                <li class="list-group-item"  >
+                  IMDB rating: <%= parsedData.vote_average  %>  <h class="font-weight-light"> (Number of votes: <%= (parsedData.vote_count) %>)  </h>
+                </li>
+  
+                <li class="list-group-item"  >
+                  <a href="<%= parsedData.homepage %>"> Offical Movie Website</a>
+                </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center" >
+      <a href="/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Go Home</a>
+    </div>
+      <div class="col-sm-12">
+    </div>
+  </div>
+</div>
+
+<style>
+#hoverid img {
+transition: .5s ease;
+}
+
+#hoverid  img:hover{
+box-shadow: 0 0 0 10px #000000;
+transition: .5s ease;
+}
+</style>
+
+</html>

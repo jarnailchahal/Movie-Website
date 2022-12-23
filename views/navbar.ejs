@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color: #5eadfc;">  
+  <div class="container-fluid collapse navbar-collapse"  id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto" >
+      <li class="nav-item active">
+        <a class="nav-link" href="#"> Hello <%= name %> !<span class="sr-only">(current)</span></a>
+      </li>
+
+      <form action="/logout?_method=DELETE" method="POST">
+        <li class="nav-item">
+          <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Log Out</button>
+        </li>
+      </form>
+
+      <form action="/users" method="GET">
+        <li class="nav-item">
+          <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">View All Users</button>
+        </li>
+      </form>
+
+      <!-- use this div to center the website name -->
+      <div class="mx-auto" style="width: 240px">
+      </div>
+
+      <ul class="nav navbar-nav text-nowrap flex-row mx-auto" style="width: 100px;">
+        <li class="nav-item"><div><a class="nav-link" style="background-color: #5eadfc; color: #000000;" href="/login">Movie Lovers</a></li>
+        <button class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target=".nav-content" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+      </ul>
+
+    </ul>
+
+    <form action="/search?" method="POST"  class="form-inline my-2 my-lg-0">
+      <input  name="searchstring" type="text" id="movie" class="form-control mr-sm-2" type="search" placeholder="Search any movie.." aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+
+  </div>
+</nav>
+
+<style>
+  .container-fluid-nav div{
+    display: flex;
+  justify-content: space-around;}
+</style>

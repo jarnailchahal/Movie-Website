@@ -1,0 +1,44 @@
+<html>
+
+  <head>
+    <title>	Movie Lovers </title>
+    <%- include('head') -%>
+  </head>
+
+<!-- <h1>Hi <%= name %></h1> -->
+<%- include('navbar') -%>
+
+
+<div class="container">
+  <br> 
+  <div >
+    <h1 class="display-5"> Now playing in Theaters Nearby..</h1>
+  </div>
+  <div class="row">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+      <% parsedData.forEach((movie)=> { %>
+        <div id ="hoverid" class=" mb-3 col-md-3 col-sm-4 "> 
+          <a href="/movie/<%= movie.id %>" > <img  src="<%= imageBaseUrl + movie.poster_path %>" /> </a>
+          <h3 class="card-body"><%= movie.title %> <small class="text-muted">(<%= movie.release_date.substring(0, 4); %>)</small> </h3>
+        </div>
+        <% })%>
+    </div>
+      <div class="col-sm-12">
+    </div>
+  </div>
+</div>
+
+<style>
+#hoverid img {
+transition: .5s ease;
+}
+
+#hoverid  img:hover{
+box-shadow: 0 0 0 10px #000000;
+transition: .5s ease;
+
+}
+
+</style>
+
+</html>
