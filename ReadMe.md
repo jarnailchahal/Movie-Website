@@ -1,7 +1,7 @@
 To start, please:
 
 1. Cd into the extracted Movie-Website folder and do "npm install" in terminal to download all required modules.
-2. Next, run "node server.js"
+2. Next, do "node server.js"
 3. Goto http://localhost:3000/ 
 
 Default Username: admin@admin <br />
