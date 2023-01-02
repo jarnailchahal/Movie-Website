@@ -1,6 +1,6 @@
 To start, please:
 
-1. Cd into the extracted Movie-Website folder and do "npm install" in terminal to download all required modules.
+1. cd into the extracted Movie-Website folder and do "npm install" in terminal to download all required modules.
 2. Next, do "node server.js"
 3. Goto http://localhost:3000/ 
 
